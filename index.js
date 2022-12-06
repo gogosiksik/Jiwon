@@ -31,13 +31,10 @@ function imagesChange(){
     ﻿const images = ["./1.jpg","./2.jpg","./3.jpg","./4.jpg","./5.jpg"]
     // document.getElementsByClassName('backgroundImg')[0].style.backgroundImage=`url(${images[0]})`
     
-    a = Math.random()*4 + 1
-    console.log('a')     
-    b = Math.floor(a);
-    document.getElementsByClassName('backgroundImg')[0].style.backgroundImage=`url(${images[b]})`
-
+    a = Math.floor(Math.random()* images.length);    
+    document.getElementsByClassName('backgroundImg')[0].style.backgroundImage=`url(${images[a]})`
     }
 
 setInterval(function(){
     imagesChange()
-},5000)
+},4000)
